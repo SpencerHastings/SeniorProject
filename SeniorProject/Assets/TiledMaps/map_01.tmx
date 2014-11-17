@@ -2,6 +2,122 @@
 <map version="1.0" orientation="orthogonal" renderorder="right-down" width="30" height="30" tilewidth="16" tileheight="16">
  <tileset firstgid="1" name="tileset_01" tilewidth="16" tileheight="16">
   <image source="tileset_01.png" width="128" height="128"/>
+  <tile id="1">
+   <objectgroup draworder="index">
+    <object x="0" y="0" width="16" height="16"/>
+   </objectgroup>
+  </tile>
+  <tile id="3">
+   <objectgroup draworder="index">
+    <object x="0" y="16">
+     <polyline points="0,0 0,-16 16,-16"/>
+    </object>
+   </objectgroup>
+  </tile>
+  <tile id="4">
+   <objectgroup draworder="index">
+    <object x="0" y="0">
+     <polyline points="0,0 16,0"/>
+    </object>
+   </objectgroup>
+  </tile>
+  <tile id="5">
+   <objectgroup draworder="index">
+    <object x="0" y="0">
+     <polyline points="0,0 16,0 16,16"/>
+    </object>
+   </objectgroup>
+  </tile>
+  <tile id="6">
+   <objectgroup draworder="index">
+    <object x="16" y="0">
+     <polyline points="0,0 0,16 -16,16"/>
+    </object>
+   </objectgroup>
+  </tile>
+  <tile id="7">
+   <objectgroup draworder="index">
+    <object x="0" y="0" width="16" height="16"/>
+   </objectgroup>
+  </tile>
+  <tile id="8">
+   <objectgroup draworder="index">
+    <object x="0" y="0" width="16" height="16"/>
+   </objectgroup>
+  </tile>
+  <tile id="9">
+   <objectgroup draworder="index">
+    <object x="0" y="0" width="16" height="16"/>
+   </objectgroup>
+  </tile>
+  <tile id="11">
+   <objectgroup draworder="index">
+    <object x="0" y="16">
+     <polyline points="0,0 0,-16"/>
+    </object>
+   </objectgroup>
+  </tile>
+  <tile id="12">
+   <objectgroup draworder="index">
+    <object x="16" y="16">
+     <polyline points="0,0 -16,0"/>
+    </object>
+   </objectgroup>
+  </tile>
+  <tile id="13">
+   <objectgroup draworder="index">
+    <object x="16" y="0">
+     <polyline points="0,0 0,16"/>
+    </object>
+   </objectgroup>
+  </tile>
+  <tile id="14">
+   <objectgroup draworder="index">
+    <object x="16" y="16">
+     <polyline points="0,0 -16,0 -16,-16"/>
+    </object>
+   </objectgroup>
+  </tile>
+  <tile id="15">
+   <objectgroup draworder="index">
+    <object x="0" y="0" width="16" height="16"/>
+   </objectgroup>
+  </tile>
+  <tile id="16">
+   <objectgroup draworder="index">
+    <object x="0" y="0" width="16" height="16"/>
+   </objectgroup>
+  </tile>
+  <tile id="17">
+   <objectgroup draworder="index">
+    <object x="0" y="0" width="16" height="16"/>
+   </objectgroup>
+  </tile>
+  <tile id="21">
+   <objectgroup draworder="index">
+    <object x="0" y="0" width="16" height="16"/>
+   </objectgroup>
+  </tile>
+  <tile id="22">
+   <objectgroup draworder="index">
+    <object x="0" y="0" width="16" height="16"/>
+   </objectgroup>
+  </tile>
+  <tile id="23">
+   <objectgroup draworder="index">
+    <object x="0" y="0" width="16" height="16"/>
+   </objectgroup>
+  </tile>
+  <tile id="28">
+   <objectgroup draworder="index">
+    <object x="16" y="0">
+     <polyline points="0,0 0,16"/>
+    </object>
+    <object x="0" y="0">
+     <polyline points="0,0 0,16"/>
+    </object>
+   </objectgroup>
+  </tile>
  </tileset>
  <layer name="1" width="30" height="30">
   <data>
@@ -2462,14 +2578,14 @@
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
-   <tile gid="9"/>
-   <tile gid="9"/>
    <tile gid="0"/>
-   <tile gid="9"/>
-   <tile gid="9"/>
-   <tile gid="9"/>
-   <tile gid="9"/>
-   <tile gid="9"/>
+   <tile gid="0"/>
+   <tile gid="0"/>
+   <tile gid="0"/>
+   <tile gid="0"/>
+   <tile gid="0"/>
+   <tile gid="0"/>
+   <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="1"/>
@@ -3366,14 +3482,14 @@
    <tile gid="1"/>
    <tile gid="1"/>
    <tile gid="8"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
+   <tile gid="9"/>
+   <tile gid="9"/>
    <tile gid="29"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
+   <tile gid="9"/>
+   <tile gid="9"/>
+   <tile gid="9"/>
+   <tile gid="9"/>
+   <tile gid="9"/>
    <tile gid="24"/>
    <tile gid="25"/>
    <tile gid="27"/>
@@ -3619,22 +3735,4 @@
    <tile gid="1"/>
   </data>
  </layer>
- <objectgroup name="Collision">
-  <object x="80" y="288" width="64" height="96"/>
-  <object x="144" y="288" width="16" height="80"/>
-  <object x="160" y="304" width="32" height="48"/>
-  <object x="288" y="336" width="48" height="32"/>
-  <object x="352" y="336" width="48" height="32"/>
-  <object x="400" y="336" width="16" height="16"/>
-  <object x="416" y="336" width="32" height="32"/>
-  <object x="288" y="336">
-   <polyline points="0,0 0,-64 160,-64 160,0"/>
-  </object>
-  <object x="336" y="336">
-   <polyline points="0,0 0,-16"/>
-  </object>
-  <object x="352" y="336">
-   <polyline points="0,0 0,-16"/>
-  </object>
- </objectgroup>
 </map>
