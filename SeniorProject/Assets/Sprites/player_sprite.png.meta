@@ -12,6 +12,10 @@ TextureImporter:
     21300014: player_sprite_7
     21300016: player_sprite_8
     21300018: player_sprite_9
+    21300020: player_sprite_11
+    21300022: player_sprite_12
+    21300024: player_sprite_13
+    21300026: player_sprite_14
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -131,7 +135,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: player_sprite_8
       rect:
@@ -141,13 +145,53 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: player_sprite_9
       rect:
         serializedVersion: 2
         x: 32
         y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: player_sprite_11
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: player_sprite_12
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: player_sprite_13
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: player_sprite_14
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 0
         width: 16
         height: 16
       alignment: 0
