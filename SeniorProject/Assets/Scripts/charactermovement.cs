@@ -17,8 +17,8 @@ public class charactermovement : MonoBehaviour {
 	void Update () {
 
 		//Move Character
-		float vert = Input.GetAxis ("Vertical") * moveSpeed;
-		float hort = Input.GetAxis ("Horizontal") * moveSpeed;
+		float vert = Input.GetAxisRaw ("Vertical") * moveSpeed;
+		float hort = Input.GetAxisRaw ("Horizontal") * moveSpeed;
 		velocity = new Vector3 (hort, vert, 0);
 
 		if (hort == 0 & vert == 0)
