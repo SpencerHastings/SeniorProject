@@ -50,4 +50,6 @@ public class charactermovement : MonoBehaviour {
 	{
 		rigidbody2D.velocity = velocity;
 	}
+
+
 }
