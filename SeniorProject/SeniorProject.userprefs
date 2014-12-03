@@ -1,15 +1,13 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\aimove_blue.cs">
     <Files>
-      <File FileName="Assets\Scripts\charactermovement.cs" Line="54" Column="2" />
-      <File FileName="Assets\Scripts\aimove_blue.cs" Line="57" Column="1" />
+      <File FileName="Assets\Scripts\aimove_blue.cs" Line="28" Column="4" />
+      <File FileName="Assets\Scripts\charactermovement.cs" Line="51" Column="3" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore>
-      <Breakpoint file="C:\git\SeniorProject\SeniorProject\Assets\Scripts\aimove_blue.cs" line="56" />
-    </BreakpointStore>
+    <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
 </Properties>

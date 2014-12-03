@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\aimove_blue.cs" />
+     <Compile Include="Assets\Scripts\aimove_yellow.cs" />
      <Compile Include="Assets\Scripts\cameramovement.cs" />
      <Compile Include="Assets\Scripts\characterattack.cs" />
      <Compile Include="Assets\Scripts\charactermovement.cs" />

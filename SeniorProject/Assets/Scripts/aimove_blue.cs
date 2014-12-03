@@ -5,21 +5,26 @@ public class aimove_blue : MonoBehaviour {
 
 	private GameObject Player;
 	private float speed = .3f;
-	private float range = 4f;
+	private float maxrange = 1f;
+	private float minrange = .1f;
 	private Animator ani;
 	private Vector3 velocity;
+	private float dist;
 
 	// Use this for initialization
 	void Start () 
 	{
 		Player = GameObject.FindGameObjectWithTag ("Player");
 		ani = this.GetComponent<Animator>();
+
 	}
 	
 	// Update is called once per frame
 	void Update () 
 	{
-		if (Vector3.Distance(Player.transform.position, transform.position) < range)
+		dist = Vector3.Distance (Player.transform.position, transform.position);
+
+		if ((dist < maxrange) & (dist > minrange))
 		{
 			ani.SetInteger("attack", 1);
 			// Get a direction vector from us to the target
@@ -40,15 +45,9 @@ public class aimove_blue : MonoBehaviour {
 	
 	}
 
-	void OnCollisionEnter(Collision collision)
+	void OnCollisionEnter2D(Collision2D collision)
 	{
-		if (collision.gameObject.tag == "Player")
-		{
-			Vector3 dir = collision.gameObject.transform.position - transform.position;
-			dir.Normalize();
-			dir.z = 0;
-			collision.gameObject.transform.position += dir * 100f;
-		}
+
 	}
 
 	void FixedUpdate()

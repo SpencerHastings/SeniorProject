@@ -46,6 +46,11 @@ public class charactermovement : MonoBehaviour {
 		
 	}
 
+	void OnCollisionEnter2D(Collision2D collision)
+	{
+
+	}
+
 	void FixedUpdate ()
 	{
 		rigidbody2D.velocity = velocity;
