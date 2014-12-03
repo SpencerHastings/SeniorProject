@@ -4,7 +4,7 @@ using System.Collections;
 public class aimove_blue : MonoBehaviour {
 
 	private GameObject Player;
-	private float speed = .3f;
+	private float speed = 10f;
 	private float maxrange = 1f;
 	private float minrange = .1f;
 	private Animator ani;
@@ -52,6 +52,6 @@ public class aimove_blue : MonoBehaviour {
 
 	void FixedUpdate()
 	{
-		rigidbody2D.velocity = velocity;
+		rigidbody2D.velocity = velocity * Time.deltaTime;
 	}
 }

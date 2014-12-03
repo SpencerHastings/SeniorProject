@@ -4,7 +4,7 @@ using System.Collections;
 public class charactermovement : MonoBehaviour {
 
 	Vector3 velocity;
-	public float moveSpeed;
+	private float moveSpeed = 30f;
 	private Animator ani;
 
 	// Use this for initialization
@@ -53,7 +53,7 @@ public class charactermovement : MonoBehaviour {
 
 	void FixedUpdate ()
 	{
-		rigidbody2D.velocity = velocity;
+		rigidbody2D.velocity = velocity * Time.deltaTime;
 	}
 
 
