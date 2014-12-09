@@ -6,18 +6,22 @@ public class aimove_purple : MonoBehaviour {
 	private GameObject Player;
 	private Animator ani;
 	private float dist;
-	private float maxrange = .8f;
 	public GameObject bullet;
-	private float cooldown = 1f;
-	private float timing;
-	private int numofbullets = 4;
-	private float bulletrefresh = 0f;
+	private float cooldown;
+	private float bulletTimer;
+	private int bullets;
+
+	private readonly float bulletRefresh = 2f;
+	private readonly float cooldownTime = .5f;
+	private readonly float maxrange = .8f;
+	private readonly int magazine = 4;
 
 	// Use this for initialization
 	void Start () {
 
 		Player = GameObject.FindGameObjectWithTag ("Player");
 		ani = this.GetComponent<Animator>();
+		bullets = magazine;
 	
 	}
 	
@@ -28,21 +32,37 @@ public class aimove_purple : MonoBehaviour {
 		
 		if (dist < maxrange)
 		{
-			if (timing == 0f & numofbullets > 0)
+			if (cooldown == 0f & bullets > 0)
 			{
 				Shoot ();
-				timing = cooldown;
+				cooldown = cooldownTime;
 			}
 		}
 
-		if (timing > 0f)
+		if (cooldown > 0f)
 		{
-			timing -= Time.deltaTime;
+			cooldown -= Time.deltaTime;
 		}
 
-		if (timing < 0f)
+		if (cooldown < 0f)
 		{
-			timing = 0f;
+			cooldown = 0f;
+		}
+
+		if (bulletTimer > 0f)
+		{
+			bulletTimer -= Time.deltaTime;
+		}
+		
+		if (bulletTimer < 0f)
+		{
+			bulletTimer = 0f;
+			bullets += 1;
+		}
+
+		if (bulletTimer == 0 & bullets < magazine)
+		{
+			bulletTimer = bulletRefresh;
 		}
 	
 	}
@@ -50,6 +70,6 @@ public class aimove_purple : MonoBehaviour {
 	void Shoot()
 	{
 		GameObject newbullet = (GameObject)Instantiate(bullet, transform.position, new Quaternion(0,0,0,0));
-		numofbullets -= 1;
+		bullets -= 1;
 	}
 }
