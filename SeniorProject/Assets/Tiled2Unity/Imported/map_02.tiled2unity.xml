@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <!--Tiled2Unity generated xml data-->
 <!--Do not modify by hand-->
-<!--Last exported: 12/9/2014 4:41:27 PM-->
+<!--Last exported: 12/11/2014 8:52:14 AM-->
 <Tiled2Unity version="0.9.5.4">
   <AssignMaterial mesh="mesh_[00]_[00]" material="tileset_01" sortingLayerName="" sortingOrder="0" />
   <AssignMaterial mesh="mesh_[01]_[00]" material="tileset_01" sortingLayerName="" sortingOrder="1" />
@@ -35,22 +35,31 @@
       <GameObject copy="mesh_[02]_[00]" />
       <GameObject name="Collision">
         <PolygonCollider2D>
-          <Path>128,-256 144,-256 144,-208 128,-208 128,-192 112,-192 112,-176 80,-176 80,-192 64,-192 64,-272 128,-272</Path>
-          <Path>368,-256 336,-256 336,-272 368,-272</Path>
-          <Path>400,-256 384,-256 384,-272 400,-272</Path>
-          <Path>320,-256 304,-256 304,-272 320,-272</Path>
+          <Path>128,-256 144,-256 144,-204 128,-204 128,-188 112,-188 112,-172 80,-172 80,-188 64,-188 64,-272 128,-272</Path>
+          <Path>368,-252 336,-252 336,-272 368,-272</Path>
+          <Path>400,-256 416,-256 416,-252 384,-252 384,-272 400,-272</Path>
+          <Path>320,-252 288,-252 288,-256 304,-256 304,-272 320,-272</Path>
         </PolygonCollider2D>
         <EdgeCollider2D>
-          <Points>320,-256 320,-240 320,-256 288,-256 288,-192 416,-192 416,-256 384,-256 384,-240 384,-256</Points>
+          <Points>304,-256 288,-256 288,-192 416,-192 416,-252</Points>
         </EdgeCollider2D>
         <EdgeCollider2D>
-          <Points>368,-256 368,-240 368,-256 336,-256 336,-240 336,-256</Points>
+          <Points>336,-240 336,-256 336,-240</Points>
+        </EdgeCollider2D>
+        <EdgeCollider2D>
+          <Points>320,-252 320,-240 320,-252</Points>
+        </EdgeCollider2D>
+        <EdgeCollider2D>
+          <Points>368,-252 368,-240 368,-252</Points>
+        </EdgeCollider2D>
+        <EdgeCollider2D>
+          <Points>384,-240 384,-256 384,-240</Points>
         </EdgeCollider2D>
         <EdgeCollider2D>
           <Points>128,-256 144,-256</Points>
         </EdgeCollider2D>
         <EdgeCollider2D>
-          <Points>320,-272 320,-288 288,-288 288,-256</Points>
+          <Points>320,-256 320,-288 288,-288 288,-256</Points>
         </EdgeCollider2D>
         <EdgeCollider2D>
           <Points>384,-272 384,-288 416,-288 416,-256</Points>

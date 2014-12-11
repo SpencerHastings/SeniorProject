@@ -53,6 +53,7 @@
      <Compile Include="Assets\Scripts\cameramovement.cs" />
      <Compile Include="Assets\Scripts\characterattack.cs" />
      <Compile Include="Assets\Scripts\charactermovement.cs" />
+     <Compile Include="Assets\Scripts\player_health.cs" />
      <Compile Include="Assets\Tiled2Unity\Scripts\Runtime\SortingLayerExposed.cs" />
      <Compile Include="Assets\Tiled2Unity\Scripts\Runtime\TileAnimator.cs" />
      <None Include="Assets\Tiled2Unity\Imported\map_02.tiled2unity.xml" />
