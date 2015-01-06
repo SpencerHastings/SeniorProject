@@ -10,7 +10,9 @@ public class aimove_purple : MonoBehaviour {
 	private float cooldown;
 	private float bulletTimer;
 	private int bullets;
+	private Vector3 velocity;
 
+	private float speed = 1f;
 	private readonly float bulletRefresh = 2f;
 	private readonly float cooldownTime = .5f;
 	private readonly float maxrange = .8f;
@@ -37,6 +39,20 @@ public class aimove_purple : MonoBehaviour {
 				Shoot ();
 				cooldown = cooldownTime;
 			}
+
+			Vector3 dir = Player.transform.position - transform.position;
+			dir.z = 0;
+			
+			// Normalize it so that it's a unit direction vector
+			dir.Normalize();
+			
+			// Move ourselves in that direction
+			velocity = dir * speed;
+
+		}
+		else
+		{
+			velocity *= 0;
 		}
 
 		if (cooldown > 0f)
@@ -71,5 +87,10 @@ public class aimove_purple : MonoBehaviour {
 	{
 		GameObject newbullet = (GameObject)Instantiate(bullet, transform.position, new Quaternion(0,0,0,0));
 		bullets -= 1;
+	}
+
+	void FixedUpdate()
+	{
+		rigidbody2D.velocity = velocity * Time.deltaTime;
 	}
 }

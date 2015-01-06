@@ -4,9 +4,9 @@ using System.Collections;
 public class aimove_blue : MonoBehaviour {
 
 	private GameObject Player;
-	private float speed = 10f;
-	private float maxrange = 1f;
-	private float minrange = .1f;
+	private float speed = 1f;
+	private float maxrange = 10f;
+
 	private Animator ani;
 	private Vector3 velocity;
 	private float dist;
@@ -24,7 +24,7 @@ public class aimove_blue : MonoBehaviour {
 	{
 		dist = Vector3.Distance (Player.transform.position, transform.position);
 
-		if ((dist < maxrange) & (dist > minrange))
+		if ((dist < maxrange))
 		{
 			ani.SetInteger("attack", 1);
 			// Get a direction vector from us to the target
