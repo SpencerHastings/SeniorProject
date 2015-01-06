@@ -8,10 +8,12 @@ public class aimove_purple_bullet : MonoBehaviour {
 	private Vector3 velocity;
 	private float lifetime = 8f;
 	private float life = 0f;
+	private player_health playershealth;
 
 	// Use this for initialization
 	void Start () {
 		Player = GameObject.FindGameObjectWithTag ("Player");
+		playershealth = Player.GetComponent<player_health> ();
 	
 	}
 	
@@ -34,6 +36,11 @@ public class aimove_purple_bullet : MonoBehaviour {
 
 	void OnCollisionEnter2D(Collision2D collision)
 	{
+		if (collision.gameObject == Player)
+		{
+			playershealth.BulletHit(3f);
+		}
+
 		Destroy (gameObject);
 	}
 

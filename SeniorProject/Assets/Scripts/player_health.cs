@@ -51,8 +51,20 @@ public class player_health : MonoBehaviour {
 		hpbar.Change (health / maxhealth);
 	}
 
-	void OnCollisionEnter2D(Collision2D collision)
+	void OnCollisionStay2D(Collision2D collision)
 	{
-		Damage (1);
+		if (collision.gameObject.tag == "Enemy")
+		{
+			Damage (.2f);
+		}
+
+
+
 	}
+
+	public void BulletHit(float damage)
+	{
+		Damage (damage);
+	}
+	
 }
