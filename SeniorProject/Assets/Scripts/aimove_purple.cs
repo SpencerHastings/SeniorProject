@@ -93,4 +93,6 @@ public class aimove_purple : MonoBehaviour {
 	{
 		rigidbody2D.velocity = velocity * Time.deltaTime;
 	}
+
+
 }

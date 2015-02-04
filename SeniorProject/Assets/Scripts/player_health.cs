@@ -20,19 +20,22 @@ public class player_health : MonoBehaviour {
 	// Update is called once per frame
 	void Update () 
 	{
+		if (health <= 0)
+		{
+			Die ();
+		}
 
 
-		
 	}
 
-	void Damage(float damage)
+	public void Damage(float damage)
 	{
 		health -= damage;
 
 		UpdateBar ();
 	}
 
-	void Heal(float healing)
+	public void Heal(float healing)
 	{
 		health += healing;
 		
@@ -51,20 +54,11 @@ public class player_health : MonoBehaviour {
 		hpbar.Change (health / maxhealth);
 	}
 
-	void OnCollisionStay2D(Collision2D collision)
+	void Die()
 	{
-		if (collision.gameObject.tag == "Enemy")
-		{
-			Damage (.2f);
-		}
-
-
-
+		Application.LoadLevel(Application.loadedLevelName);
 	}
 
-	public void BulletHit(float damage)
-	{
-		Damage (damage);
-	}
+
 	
 }

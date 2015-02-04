@@ -50,9 +50,15 @@
      <Compile Include="Assets\Scripts\aimove_purple.cs" />
      <Compile Include="Assets\Scripts\aimove_purple_bullet.cs" />
      <Compile Include="Assets\Scripts\aimove_yellow.cs" />
+     <Compile Include="Assets\Scripts\attack_bullet.cs" />
+     <Compile Include="Assets\Scripts\attack_script.cs" />
+     <Compile Include="Assets\Scripts\bomb.cs" />
      <Compile Include="Assets\Scripts\cameramovement.cs" />
-     <Compile Include="Assets\Scripts\characterattack.cs" />
+     <Compile Include="Assets\Scripts\character_attack.cs" />
+     <Compile Include="Assets\Scripts\character_items.cs" />
      <Compile Include="Assets\Scripts\charactermovement.cs" />
+     <Compile Include="Assets\Scripts\enemy_damage.cs" />
+     <Compile Include="Assets\Scripts\enemy_health.cs" />
      <Compile Include="Assets\Scripts\player_health.cs" />
      <Compile Include="Assets\Scripts\statusbar.cs" />
      <Compile Include="Assets\Tiled2Unity\Scripts\Runtime\SortingLayerExposed.cs" />

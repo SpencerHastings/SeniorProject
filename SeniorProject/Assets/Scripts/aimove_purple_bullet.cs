@@ -8,6 +8,7 @@ public class aimove_purple_bullet : MonoBehaviour {
 	private Vector3 velocity;
 	private float lifetime = 8f;
 	private float life = 0f;
+	private float damage = 3f;
 	private player_health playershealth;
 
 	// Use this for initialization
@@ -38,7 +39,7 @@ public class aimove_purple_bullet : MonoBehaviour {
 	{
 		if (collision.gameObject == Player)
 		{
-			playershealth.BulletHit(3f);
+			playershealth.Damage(damage);
 		}
 
 		Destroy (gameObject);

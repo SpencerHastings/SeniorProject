@@ -4,17 +4,20 @@ using System.Collections;
 public class aimove_blue : MonoBehaviour {
 
 	private GameObject Player;
-	private float speed = 1f;
-	private float maxrange = 10f;
+	private float speed = 10f;
+	private float maxrange = 1f;
+
 
 	private Animator ani;
 	private Vector3 velocity;
 	private float dist;
 
+
 	// Use this for initialization
 	void Start () 
 	{
 		Player = GameObject.FindGameObjectWithTag ("Player");
+
 		ani = this.GetComponent<Animator>();
 
 	}
@@ -45,10 +48,7 @@ public class aimove_blue : MonoBehaviour {
 	
 	}
 
-	void OnCollisionEnter2D(Collision2D collision)
-	{
 
-	}
 
 	void FixedUpdate()
 	{
