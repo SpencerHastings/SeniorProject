@@ -9,6 +9,8 @@ public class charactermovement : MonoBehaviour {
 	private float time = 0f;
 	private bool canMove = true;
 	private int direction = 3;
+	private float pausetime = 0f;
+	private bool paused = false;
 
 
 	// Use this for initialization
@@ -57,12 +59,37 @@ public class charactermovement : MonoBehaviour {
 			direction = 2;
 		}
 
+		if (paused)
+		{
+
+			if (pausetime > 0)
+			{
+				pausetime -= Time.deltaTime;
+			}
+			if (pausetime < 0)
+			{
+				pausetime = 0;
+			}
+			if (pausetime == 0)
+			{
+				Movable(true);
+				paused = false;
+			}
+		}
+
 		
 	}
 
 	public void Movable(bool boolean)
 	{
 		canMove = boolean;
+	}
+
+	public void Pause(float time)
+	{
+		pausetime = time;
+		Movable (false);
+		paused = true;
 	}
 
 	public int GetDirection()
