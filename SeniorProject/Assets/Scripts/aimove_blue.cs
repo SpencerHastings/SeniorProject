@@ -52,6 +52,6 @@ public class aimove_blue : MonoBehaviour {
 
 	void FixedUpdate()
 	{
-		rigidbody2D.velocity = velocity * Time.deltaTime;
+		GetComponent<Rigidbody2D>().velocity = velocity * Time.deltaTime;
 	}
 }

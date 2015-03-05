@@ -33,7 +33,7 @@ public class aimove_yellow : MonoBehaviour {
 
 	void FixedUpdate()
 	{
-		rigidbody2D.velocity = velocity * Time.deltaTime;
+		GetComponent<Rigidbody2D>().velocity = velocity * Time.deltaTime;
 	}
 
 	IEnumerator Jump()

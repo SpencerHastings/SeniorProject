@@ -80,6 +80,18 @@ public class charactermovement : MonoBehaviour {
 		
 	}
 
+	public void Freeze(bool boolean)
+	{
+		if (boolean)
+		{
+			Time.timeScale = 0;
+		}
+		if (!boolean)
+		{
+			Time.timeScale = 1;
+		}
+	}
+
 	public void Movable(bool boolean)
 	{
 		canMove = boolean;
@@ -99,7 +111,7 @@ public class charactermovement : MonoBehaviour {
 
 	void FixedUpdate ()
 	{
-		rigidbody2D.velocity = velocity * Time.deltaTime;
+		GetComponent<Rigidbody2D>().velocity = velocity * Time.deltaTime;
 	}
 
 

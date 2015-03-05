@@ -46,6 +46,6 @@ public class attack_bullet : MonoBehaviour {
 	
 	void FixedUpdate()
 	{
-		rigidbody2D.velocity = velocity * speed * Time.deltaTime;
+		GetComponent<Rigidbody2D>().velocity = velocity * speed * Time.deltaTime;
 	}
 }

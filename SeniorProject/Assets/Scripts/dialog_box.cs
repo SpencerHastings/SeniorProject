@@ -78,7 +78,8 @@ public class dialog_box : MonoBehaviour {
 		current_dialog = dialog;
 		current_line = current_dialog.lines.First(i => i.line_id == 1);
 		SetAll (current_line.text, current_line.name, null);
-		char_move.Movable (false);
+		//char_move.Movable (false);
+		char_move.Freeze (true);
 		Show ();
 	}
 
@@ -103,7 +104,8 @@ public class dialog_box : MonoBehaviour {
 		linecount = 0;
 		current_dialog = null;
 		current_line = null;
-		char_move.Movable (true);
+		//char_move.Movable (true);
+		char_move.Freeze (false);
 		isActive = false;
 	}
 }
