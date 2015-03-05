@@ -6,20 +6,25 @@ public class character_attack : MonoBehaviour {
 	public GameObject fire;
 	public GameObject lightning;
 	public GameObject Bomb;
+	public GameObject water;
 	charactermovement char_move;
 	player_health play_hlth;
+	SpriteRenderer char_sprt;
 	character_items bombs;
 	character_items potions;
 	public float potion_healing;
 	public float fire_cost;
 	public float lightning_cost;
+	public float earth_cost;
+	public float water_cost;
+
 
 	// Use this for initialization
 	void Start () {
 
 		play_hlth = gameObject.GetComponent<player_health> ();
 		char_move = gameObject.GetComponent<charactermovement> ();
-
+		char_sprt = gameObject.GetComponent<SpriteRenderer> ();
 
 
 		character_items[] ch_items = gameObject.GetComponents<character_items>();
@@ -44,13 +49,13 @@ public class character_attack : MonoBehaviour {
 	void Update () {
 
 
-		if (Input.GetKeyDown(KeyCode.Space) && bombs.items > 0)
+		if (Input.GetKeyDown(KeyCode.E) && bombs.items > 0)
 		{
 			GameObject newbomb = (GameObject)Instantiate(Bomb, transform.position, new Quaternion(0,0,0,0));
 			bombs.RemoveItem(1);
 		}
 
-		if (Input.GetKeyDown(KeyCode.LeftControl) && potions.items > 0)
+		if (Input.GetKeyDown(KeyCode.Q) && potions.items > 0)
 		{
 			play_hlth.Heal(potion_healing);
 			potions.RemoveItem(1);
@@ -59,13 +64,33 @@ public class character_attack : MonoBehaviour {
 		if (Input.GetKeyDown(KeyCode.Z))
 		{
 			Fire(char_move.GetDirection());
-
 		}
 
 		if (Input.GetKeyDown(KeyCode.X))
 		{
 			Lightning(char_move.GetDirection());
-			
+		}
+
+		if (Input.GetKeyDown(KeyCode.S))
+		{
+			Water(char_move.GetDirection());
+		}
+
+		if (Input.GetKeyDown(KeyCode.C))
+		{
+			play_hlth.Damage(earth_cost * 2);
+			play_hlth.ChangeDefense(.5f);
+		}
+
+		if (Input.GetKey(KeyCode.C))
+		{
+			Earth();
+		}
+
+		if (Input.GetKeyUp(KeyCode.C))
+		{
+			char_sprt.color = Color.white;
+			play_hlth.ChangeDefense(1f);
 		}
 
 		if (Input.GetKey("escape"))
@@ -126,6 +151,38 @@ public class character_attack : MonoBehaviour {
 			break;
 		}
 		play_hlth.Damage(lightning_cost);
+		char_move.Pause (.3f);
+
+
+	}
+
+	void Earth()
+	{
+		char_sprt.color = new Color32(150,75,0,255);
+		play_hlth.Damage(earth_cost * Time.deltaTime);
+	}
+
+	void Water(int direction)
+	{
+		GameObject newwater = (GameObject)Instantiate(water, transform.position, new Quaternion(0,0,0,0));
+		newwater.transform.Rotate(new Vector3(0, 0, (direction - 1) * 90));
+		
+		switch (direction)
+		{
+		case 1:
+			newwater.transform.position += new Vector3(0,.15f,0);
+			break;
+		case 2:
+			newwater.transform.position += new Vector3(-.15f,0,0);
+			break;
+		case 3:
+			newwater.transform.position += new Vector3(0,-.15f,0);
+			break;
+		case 4:
+			newwater.transform.position += new Vector3(.15f,0,0);
+			break;
+		}
+		play_hlth.Damage(water_cost);
 		char_move.Pause (.3f);
 
 

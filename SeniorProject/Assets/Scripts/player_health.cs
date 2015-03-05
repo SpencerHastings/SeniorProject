@@ -8,7 +8,8 @@ public class player_health : MonoBehaviour {
 
 	public float health = 100f;
 	public float maxhealth = 100f;
-	public statusbar hpbar;  
+	public statusbar hpbar;
+	float defense_modifier = 1f;
 	//private float oldhealth;
 
 	// Use this for initialization
@@ -30,7 +31,7 @@ public class player_health : MonoBehaviour {
 
 	public void Damage(float damage)
 	{
-		health -= damage;
+		health -= damage * defense_modifier;
 
 		UpdateBar ();
 	}
@@ -38,7 +39,12 @@ public class player_health : MonoBehaviour {
 	public void Heal(float healing)
 	{
 		health += healing;
-		
+
+		if (health > maxhealth)
+		{
+			health = maxhealth;
+		}
+
 		UpdateBar ();
 	}
 
@@ -57,6 +63,11 @@ public class player_health : MonoBehaviour {
 	void Die()
 	{
 		Application.LoadLevel(Application.loadedLevelName);
+	}
+
+	public void ChangeDefense(float newDM)
+	{
+		defense_modifier = newDM;
 	}
 
 
