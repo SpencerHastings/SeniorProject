@@ -46,6 +46,7 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\GameData.cs" />
      <Compile Include="Assets\Scripts\aimove_blue.cs" />
      <Compile Include="Assets\Scripts\aimove_purple.cs" />
      <Compile Include="Assets\Scripts\aimove_purple_bullet.cs" />
@@ -58,6 +59,7 @@
      <Compile Include="Assets\Scripts\character_items.cs" />
      <Compile Include="Assets\Scripts\charactermovement.cs" />
      <Compile Include="Assets\Scripts\dialog_box.cs" />
+     <Compile Include="Assets\Scripts\door.cs" />
      <Compile Include="Assets\Scripts\enemy_damage.cs" />
      <Compile Include="Assets\Scripts\enemy_health.cs" />
      <Compile Include="Assets\Scripts\game.cs" />
