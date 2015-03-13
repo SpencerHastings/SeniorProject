@@ -69,6 +69,7 @@
      <Compile Include="Assets\Tiled2Unity\Scripts\Runtime\TileAnimator.cs" />
      <Compile Include="Assets\Tiled2Unity\Scripts\Runtime\TiledMap.cs" />
      <None Include="Assets\Tiled2Unity\Imported\map_02.tiled2unity.xml" />
+     <None Include="Assets\Tiled2Unity\Imported\map_05.tiled2unity.xml" />
      <None Include="Assets\Tiled2Unity\Imported\map_03.tiled2unity.xml" />
      <None Include="Assets\Tiled2Unity\Prefabs\_ReadMe.txt" />
      <None Include="Assets\Tiled2Unity\Shaders\shaTiledMap.shader" />

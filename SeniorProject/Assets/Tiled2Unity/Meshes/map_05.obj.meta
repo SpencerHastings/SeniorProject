@@ -1,5 +1,7 @@
 fileFormatVersion: 2
-guid: 64869220db1e50b45bb0defbd7db2da6
+guid: 786c5d19c4e10734bb18229608d556ab
+timeCreated: 1426262192
+licenseType: Free
 ModelImporter:
   serializedVersion: 18
   fileIDToRecycleName:
@@ -62,7 +64,7 @@ ModelImporter:
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
-    useFileScale: 0
+    useFileScale: 1
   tangentSpace:
     normalSmoothAngle: 60
     splitTangentsAcrossUV: 1
