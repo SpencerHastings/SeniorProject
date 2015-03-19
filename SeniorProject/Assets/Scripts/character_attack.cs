@@ -5,13 +5,14 @@ public class character_attack : MonoBehaviour {
 
 	public GameObject fire;
 	public GameObject lightning;
-	public GameObject Bomb;
+	public GameObject bomb;
 	public GameObject water;
 	charactermovement char_move;
 	player_health play_hlth;
 	SpriteRenderer char_sprt;
 	character_items bombs;
 	character_items potions;
+	public character_items activeItem;
 	public float potion_healing;
 	public float fire_cost;
 	public float lightning_cost;
@@ -20,7 +21,8 @@ public class character_attack : MonoBehaviour {
 
 
 	// Use this for initialization
-	void Start () {
+	void Start () 
+	{
 
 		play_hlth = gameObject.GetComponent<player_health> ();
 		char_move = gameObject.GetComponent<charactermovement> ();
@@ -48,58 +50,72 @@ public class character_attack : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-
-		if (Input.GetKeyDown(KeyCode.E) && bombs.items > 0)
+		if (activeItem != null)
 		{
-			GameObject newbomb = (GameObject)Instantiate(Bomb, transform.position, new Quaternion(0,0,0,0));
-			bombs.RemoveItem(1);
+			if (Input.GetButtonDown("Item") && activeItem.items > 0)
+			{
+				if (activeItem == bombs)
+				{
+					Bomb ();
+				}
+				if (activeItem == potions)
+				{
+					Potion ();
+				}
+			}
 		}
 
-		if (Input.GetKeyDown(KeyCode.Q) && potions.items > 0)
-		{
-			play_hlth.Heal(potion_healing);
-			potions.RemoveItem(1);
-		}
-
-		if (Input.GetKeyDown(KeyCode.Z))
+		if (Input.GetButtonDown("Fire"))
 		{
 			Fire(char_move.GetDirection());
 		}
 
-		if (Input.GetKeyDown(KeyCode.X))
+		if (Input.GetButtonDown("Lightning"))
 		{
 			Lightning(char_move.GetDirection());
 		}
 
-		if (Input.GetKeyDown(KeyCode.S))
+		if (Input.GetButtonDown("Water"))
 		{
 			Water(char_move.GetDirection());
 		}
 
-		if (Input.GetKeyDown(KeyCode.C))
+		if (Input.GetButtonDown("Earth"))
 		{
 			play_hlth.Damage(earth_cost * 2);
 			play_hlth.ChangeDefense(.5f);
 		}
 
-		if (Input.GetKey(KeyCode.C))
+		if (Input.GetButton("Earth"))
 		{
 			Earth();
 		}
 
-		if (Input.GetKeyUp(KeyCode.C))
+		if (Input.GetButtonUp("Earth"))
 		{
 			char_sprt.color = Color.white;
 			play_hlth.ChangeDefense(1f);
 		}
 
-		if (Input.GetKey("escape"))
+		if (Input.GetButton("Pause"))
 		{
 			Application.Quit();
 		}
 
 
 	
+	}
+
+	void Potion()
+	{
+		play_hlth.Heal(potion_healing);
+		potions.RemoveItem(1);
+	}
+
+	void Bomb()
+	{
+		GameObject newbomb = (GameObject)Instantiate(bomb, transform.position, new Quaternion(0,0,0,0));
+		bombs.RemoveItem(1);
 	}
 
 
