@@ -1,14 +1,15 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\item_btn.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\dialog_box.cs">
     <Files>
-      <File FileName="Assets\Scripts\item_btn.cs" Line="41" Column="23" />
-      <File FileName="Assets\Scripts\statusbar.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\player_health.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\inventory_bar.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\dialog_box.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\dialog_box.cs" Line="106" Column="26" />
+      <File FileName="Assets\Scripts\character_items.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\character_attack.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\aimove_blue.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\player_health.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\attack_bullet.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\game.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\charactermovement.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\aimove_yellow.cs" Line="18" Column="56" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
