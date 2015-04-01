@@ -9,6 +9,7 @@ public class item_btn : MonoBehaviour {
 	private CanvasGroup canvas_grp;
 	private character_items item;
 	public string tag;
+	public Sprite sprite;
 
 	// Use this for initialization
 	void Start () {
@@ -39,6 +40,7 @@ public class item_btn : MonoBehaviour {
 		if (canvas_grp.alpha == 1)
 		{
 			char_attack.activeItem = item;
+			char_attack.SetItem(sprite);
 		}
 	}
 }

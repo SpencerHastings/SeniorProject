@@ -4,7 +4,7 @@ using System.Collections;
 public class charactermovement : MonoBehaviour {
 
 	Vector3 velocity;
-	private float moveSpeed = 30f;
+	public float moveSpeed = 30f;
 	private Animator ani;
 	private float time = 0f;
 	private bool canMove = true;

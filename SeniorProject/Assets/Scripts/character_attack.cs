@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class character_attack : MonoBehaviour {
 
@@ -12,12 +13,15 @@ public class character_attack : MonoBehaviour {
 	SpriteRenderer char_sprt;
 	character_items bombs;
 	character_items potions;
+	character_items nones;
 	public character_items activeItem;
 	public float potion_healing;
 	public float fire_cost;
 	public float lightning_cost;
 	public float earth_cost;
 	public float water_cost;
+	public Image activeItemImage;
+	public Text activeItemText;
 
 
 	// Use this for initialization
@@ -43,7 +47,14 @@ public class character_attack : MonoBehaviour {
 				potions = ch_item;
 			}
 
+			if (ch_item.item_tag == "None")
+			{
+				nones = ch_item;
+			}
+
 		}
+
+		activeItem = nones;
 	
 	}
 	
@@ -62,6 +73,8 @@ public class character_attack : MonoBehaviour {
 				{
 					Potion ();
 				}
+
+				activeItemText.text = activeItem.items.ToString();
 			}
 		}
 
@@ -203,4 +216,11 @@ public class character_attack : MonoBehaviour {
 
 
 	}
+
+	public void SetItem(Sprite image)
+	{
+		activeItemImage.sprite = image;
+		activeItemText.text = activeItem.items.ToString();
+	}
+
 }

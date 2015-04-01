@@ -5,16 +5,16 @@ using UnityEngine.UI;
 public class character_items : MonoBehaviour {
 
 	public string item_tag;
-
-	public Text item_number;
+	private GameObject Player;
+	private character_attack char_attack;
 	public int items = 0;
 	public int item_limit;
 
 	// Use this for initialization
 	void Start () 
 	{
-
-
+		Player = GameObject.FindGameObjectWithTag ("Player");
+		char_attack = Player.GetComponent<character_attack> ();
 	}
 	
 	// Update is called once per frame
@@ -31,6 +31,10 @@ public class character_items : MonoBehaviour {
 		{
 			AddItem (1);
 			Destroy(collision.gameObject);
+			if (char_attack.activeItem == this)
+			{
+				char_attack.activeItemText.text = items.ToString(); 
+			}
 		}
 	} 
 
@@ -43,7 +47,7 @@ public class character_items : MonoBehaviour {
 			items = item_limit;
 		}
 
-		item_number.text = items.ToString ();
+
 
 	}
 
@@ -56,6 +60,6 @@ public class character_items : MonoBehaviour {
 			items = 0;
 		}
 		
-		item_number.text = items.ToString ();
+
 	}
 }
