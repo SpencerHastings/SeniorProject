@@ -17,6 +17,8 @@ public class dialog_box : MonoBehaviour {
 	public int linecount = 0;
 	public bool isActive = false;
 
+	public Sprite potion;
+
 	// Use this for initialization
 	void Start () 
 	{
@@ -37,6 +39,16 @@ public class dialog_box : MonoBehaviour {
 
 		}
 
+	}
+
+	Sprite GetImage(int image_id)
+	{
+		if (image_id == 1)
+		{
+			return potion;
+		}
+
+		return null;
 	}
 
 	public void SetAll(string Dialog, string Name, Sprite Image)
@@ -77,8 +89,7 @@ public class dialog_box : MonoBehaviour {
 		linecount++;
 		current_dialog = dialog;
 		current_line = current_dialog.lines.First(i => i.line_id == 1);
-		SetAll (current_line.text, current_line.name, null);
-		//char_move.Movable (false);
+		SetAll (current_line.text, current_line.name, GetImage (current_line.image_id));
 		char_move.Freeze (true);
 		Show ();
 	}
@@ -153,6 +164,11 @@ public class dialog_storage : MonoBehaviour
 
 	}));
 
+	static dialog_set potion_intro = new dialog_set (dialog_sets, 2, new List<line> (new line[] {
+		new line (1,"Potions heal you. Select them in the inventory and press \"E\" to use.", "Potion", 1)
+			
+	}));
+
 
 	
 	public static dialog_set GetDialog(int dialog_id)
@@ -164,6 +180,8 @@ public class dialog_storage : MonoBehaviour
 	{
 		DontDestroyOnLoad(this);
 	}
+
+
 }
 
 

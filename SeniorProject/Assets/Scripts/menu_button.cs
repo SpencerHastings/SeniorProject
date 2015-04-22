@@ -22,25 +22,24 @@ public class menu_button : MonoBehaviour {
 
 	public void Click()
 	{
-		if (p.alpha == 1)
+
+		if (button == "Resume")
 		{
-			if (button == "Resume")
-			{
 				g.Unpause();
-			}
-			if (button == "Save")
-			{
-				
-			}
-			if (button == "Load")
-			{
-				
-			}
-			if (button == "Title")
-			{
-				
-			}
 		}
+		if (button == "Save")
+		{
+				
+		}
+		if (button == "Load")
+		{
+				
+		}
+		if (button == "Title")
+		{
+			
+		}
+
 
 	}
 }

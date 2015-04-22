@@ -6,25 +6,33 @@ public class pause : MonoBehaviour {
 	private CanvasGroup canvas_grp;
 
 
+
+
 	// Use this for initialization
 	void Start () {
 	
 		canvas_grp = gameObject.GetComponent<CanvasGroup> ();
+		this.gameObject.SetActive (false);
+
 
 	}
 	
 	// Update is called once per frame
 	void Update () {
+
+
 	
 	}
 
 	public void Show()
 	{
-		canvas_grp.alpha = 1;
+		this.gameObject.SetActive (true);
 	}
 
 	public void Hide()
 	{
-		canvas_grp.alpha = 0;
+		this.gameObject.SetActive (false);
 	}
+
+
 }

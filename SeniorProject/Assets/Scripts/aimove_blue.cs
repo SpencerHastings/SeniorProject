@@ -45,6 +45,15 @@ public class aimove_blue : MonoBehaviour {
 			ani.SetInteger("attack", 0);
 			velocity *= 0;
 		}
+
+		if (velocity.x > 0)
+		{
+			ani.SetInteger("direction", 0);
+		}
+		if (velocity.x < 0)
+		{
+			ani.SetInteger("direction", 1);
+		}
 	
 	}
 

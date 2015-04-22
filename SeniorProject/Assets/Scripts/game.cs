@@ -37,6 +37,7 @@ public class game : MonoBehaviour {
 	public void Pause()
 	{
 		char_move.Movable (false);
+		char_move.Freeze (true);
 		dimmer.color = new Color (0, 0, 0, 100);
 		p.Show ();
 	}
@@ -44,6 +45,7 @@ public class game : MonoBehaviour {
 	public void Unpause()
 	{
 		char_move.Movable (true);
+		char_move.Freeze (false);
 		dimmer.color = new Color (0, 0, 0, 0);
 		p.Hide ();
 	}
