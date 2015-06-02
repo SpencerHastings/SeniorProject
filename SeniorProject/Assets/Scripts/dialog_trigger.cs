@@ -5,13 +5,13 @@ public class dialog_trigger : MonoBehaviour {
 
 	public int dialog_id;
 
-	public GameObject dialog_box;
+	private GameObject dialog_box;
 	private dialog_box d;
 	private bool enabled = true;
 
 	// Use this for initialization
 	void Start () {
-
+		dialog_box = GameObject.FindGameObjectWithTag ("Dialog");
 		d = dialog_box.GetComponent<dialog_box> ();
 	
 	}

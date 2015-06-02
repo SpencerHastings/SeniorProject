@@ -6,7 +6,7 @@ public class aimove_yellow : MonoBehaviour {
 	private GameObject Player;
 	private Vector3 velocity;
 	private float jumptime = .7f;
-	private float jumpspeed = 70f; 
+	private float jumpspeed = 70f;
 	private Animator ani;
 	private float dist;
 	private float maxrange = .8f;

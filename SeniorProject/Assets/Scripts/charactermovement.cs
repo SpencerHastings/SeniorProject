@@ -7,7 +7,7 @@ public class charactermovement : MonoBehaviour {
 	public float moveSpeed = 30f;
 	private Animator ani;
 	private float time = 0f;
-	private bool canMove = true;
+	public bool canMove = true;
 	private int direction = 3;
 	private float pausetime = 0f;
 	private bool paused = false;

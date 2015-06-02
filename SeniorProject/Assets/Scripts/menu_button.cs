@@ -12,7 +12,7 @@ public class menu_button : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		g = game.GetComponent<game> ();
-		p = pausemenu.GetComponent<CanvasGroup> ();
+		p = pausemenu.GetComponent<CanvasGroup> (); 
 	}
 	
 	// Update is called once per frame
@@ -37,6 +37,8 @@ public class menu_button : MonoBehaviour {
 		}
 		if (button == "Title")
 		{
+			g.Unpause();
+			this.GetComponent<change_scene> ().OpenScene();
 			
 		}
 

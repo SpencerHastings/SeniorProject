@@ -47,7 +47,6 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\GameData.cs" />
-     <Compile Include="Assets\Scripts\NewBehaviourScript.cs" />
      <Compile Include="Assets\Scripts\aimove_blue.cs" />
      <Compile Include="Assets\Scripts\aimove_purple.cs" />
      <Compile Include="Assets\Scripts\aimove_purple_bullet.cs" />
@@ -60,18 +59,24 @@
      <Compile Include="Assets\Scripts\character_attack.cs" />
      <Compile Include="Assets\Scripts\character_items.cs" />
      <Compile Include="Assets\Scripts\charactermovement.cs" />
+     <Compile Include="Assets\Scripts\chest.cs" />
      <Compile Include="Assets\Scripts\dialog_box.cs" />
+     <Compile Include="Assets\Scripts\dialog_image.cs" />
      <Compile Include="Assets\Scripts\dialog_trigger.cs" />
      <Compile Include="Assets\Scripts\door.cs" />
      <Compile Include="Assets\Scripts\enemy_damage.cs" />
      <Compile Include="Assets\Scripts\enemy_health.cs" />
      <Compile Include="Assets\Scripts\exit.cs" />
      <Compile Include="Assets\Scripts\game.cs" />
+     <Compile Include="Assets\Scripts\game_end.cs" />
      <Compile Include="Assets\Scripts\inventory_bar.cs" />
      <Compile Include="Assets\Scripts\item_btn.cs" />
+     <Compile Include="Assets\Scripts\map.cs" />
      <Compile Include="Assets\Scripts\menu_button.cs" />
      <Compile Include="Assets\Scripts\pause.cs" />
      <Compile Include="Assets\Scripts\player_health.cs" />
+     <Compile Include="Assets\Scripts\soundmanager.cs" />
+     <Compile Include="Assets\Scripts\sprite_storage.cs" />
      <Compile Include="Assets\Scripts\statusbar.cs" />
      <Compile Include="Assets\Tiled2Unity\Scripts\Runtime\SortingLayerExposed.cs" />
      <Compile Include="Assets\Tiled2Unity\Scripts\Runtime\TileAnimator.cs" />

@@ -1,0 +1,12 @@
+fileFormatVersion: 2
+guid: 8552ab9e2f0fcad46bda7600c42a3c4b
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - fire: {fileID: 8300000, guid: dda6e630b1d959e4ea36013247288507, type: 3}
+  - lightning: {fileID: 8300000, guid: a417a4efddd061545aabcb5e7258953e, type: 3}
+  - water: {fileID: 8300000, guid: 87baf362e8cf00543a4b4aca13b3508c, type: 3}
+  - stone: {fileID: 8300000, guid: fb289d910ceedf74a9e65bc5d2156dfd, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
